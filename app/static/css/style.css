@@ -1,4 +1,4 @@
-@import url("./main.css?v=20261003a");
+@import url("./main.css?v=20261003c");
 
 /* Compatibility entry point. .hero-banner::before imagery has moved to the
    media layer; the shared frosted navigation uses backdrop-filter: blur(12px). */

@@ -263,13 +263,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   startSceneRotation();
 
+  const assetChecks = new Map();
   const localImages = [...document.querySelectorAll('[data-local-src]')];
   const loadLocalImage = async (image) => {
     const url = image.dataset.localSrc;
     if (!url || image.dataset.checked) return;
     image.dataset.checked = 'true';
-    if (await localAssetExists(url)) image.src = url;
-    else image.classList.add('is-unavailable');
+    const loadFallback = async () => {
+      if (await localAssetExists(url)) image.src = url;
+      else image.classList.add('is-unavailable');
+    };
+    const imageUrl = image.dataset.imageUrl;
+    if (imageUrl) {
+      image.addEventListener('error', loadFallback, { once: true });
+      image.src = imageUrl;
+    } else {
+      await loadFallback();
+    }
   };
   if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {

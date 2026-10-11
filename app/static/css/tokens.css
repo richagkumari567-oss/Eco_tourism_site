@@ -1,23 +1,55 @@
 :root {
   color-scheme: light;
-  --eco-forest-950: #10251b;
-  --eco-forest-900: #183a2b;
-  --eco-forest-800: #24513a;
-  --eco-moss-600: #527b56;
-  --eco-moss-400: #85a783;
-  --eco-teak-700: #75563f;
-  --eco-cream-100: #faf8f1;
-  --eco-cream-200: #f0ede2;
-  --eco-white: #fffefa;
-  --eco-ink: #202c25;
-  --eco-muted: #617068;
-  --eco-sunrise: #e3b66f;
-  --eco-monsoon: #4d8581;
-  --eco-success: #3e7956;
-  --eco-warning: #9b6d24;
-  --eco-error: #a54542;
-  --eco-info: #376d7a;
 
+  /* Rich Nature-Inspired Color Palette */
+  --eco-forest-950: #081a11;
+  --eco-forest-900: #0f2c1d;
+  --eco-forest-850: #153825;
+  --eco-forest-800: #1c4a32;
+  --eco-forest-700: #266343;
+  --eco-moss-600: #3b8256;
+  --eco-moss-500: #48a36c;
+  --eco-moss-400: #6ee7b7;
+  --eco-moss-100: #e6f9f0;
+  --eco-emerald: #10b981;
+  --eco-emerald-light: #34d399;
+  --eco-emerald-glow: rgba(16, 185, 129, 0.25);
+  
+  /* Earth, Wood & Sun Accents */
+  --eco-teak-800: #5c4028;
+  --eco-teak-700: #7a5839;
+  --eco-teak-600: #99714d;
+  --eco-sunrise: #f59e0b;
+  --eco-sunrise-hover: #d97706;
+  --eco-sunrise-light: #fbbf24;
+  --eco-sunrise-glow: rgba(245, 158, 11, 0.35);
+  --eco-amber-50: #fffbeb;
+
+  /* Backgrounds & Surfaces */
+  --eco-cream-50: #fdfcf7;
+  --eco-cream-100: #f7f5ed;
+  --eco-cream-200: #ede9dc;
+  --eco-cream-300: #dfdac8;
+  --eco-white: #ffffff;
+  --eco-surface: #ffffff;
+  
+  /* Text & Inks */
+  --eco-ink: #111e16;
+  --eco-ink-light: #2d3f34;
+  --eco-muted: #566b60;
+  --eco-muted-light: #7c9186;
+
+  /* Semantic Highlights */
+  --eco-monsoon: #2563eb;
+  --eco-success: #15803d;
+  --eco-success-bg: rgba(21, 128, 61, 0.1);
+  --eco-warning: #b45309;
+  --eco-warning-bg: rgba(245, 158, 11, 0.12);
+  --eco-error: #dc2626;
+  --eco-error-bg: rgba(220, 38, 38, 0.08);
+  --eco-info: #0284c7;
+
+  /* Spacing Scale */
   --eco-space-1: 0.5rem;
   --eco-space-2: 1rem;
   --eco-space-3: 1.5rem;
@@ -27,22 +59,44 @@
   --eco-space-7: 6rem;
   --eco-space-8: 8rem;
 
+  /* Border Radii */
+  --eco-radius-xs: 0.375rem;
   --eco-radius-sm: 0.65rem;
   --eco-radius-md: 1rem;
   --eco-radius-lg: 1.35rem;
-  --eco-radius-xl: 2rem;
-  --eco-radius-pill: 999px;
-  --eco-shadow-soft: 0 12px 34px rgba(16, 37, 27, 0.09);
-  --eco-shadow-card: 0 22px 54px rgba(16, 37, 27, 0.15);
-  --eco-focus: 0 0 0 3px rgba(227, 182, 111, 0.65);
+  --eco-radius-xl: 1.85rem;
+  --eco-radius-2xl: 2.5rem;
+  --eco-radius-pill: 9999px;
 
+  /* Elevated Multi-Layer Shadows */
+  --eco-shadow-xs: 0 1px 2px rgba(10, 27, 18, 0.04);
+  --eco-shadow-sm: 0 2px 8px rgba(10, 27, 18, 0.06);
+  --eco-shadow-soft: 0 10px 30px -5px rgba(10, 27, 18, 0.07), 0 4px 10px -2px rgba(10, 27, 18, 0.03);
+  --eco-shadow-card: 0 16px 40px -10px rgba(10, 27, 18, 0.11), 0 0 0 1px rgba(15, 44, 29, 0.05);
+  --eco-shadow-card-hover: 0 26px 60px -12px rgba(10, 27, 18, 0.19), 0 0 0 1px rgba(16, 185, 129, 0.22);
+  --eco-shadow-modal: 0 35px 80px -15px rgba(10, 27, 18, 0.35);
+  --eco-focus: 0 0 0 3px rgba(245, 158, 11, 0.45);
+  --eco-focus-emerald: 0 0 0 3px rgba(16, 185, 129, 0.35);
+
+  /* Glassmorphism Styles */
+  --eco-glass-bg: rgba(255, 255, 255, 0.82);
+  --eco-glass-bg-dark: rgba(10, 27, 18, 0.78);
+  --eco-glass-border: rgba(255, 255, 255, 0.45);
+  --eco-glass-border-dark: rgba(255, 255, 255, 0.12);
+
+  /* Typography */
   --eco-font-display: "DM Serif Display", Georgia, serif;
-  --eco-font-body: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --eco-font-body: "Manrope", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   --eco-text-xs: 0.78rem;
   --eco-text-sm: 0.9rem;
-  --eco-text-base: 1rem;
-  --eco-text-lg: 1.2rem;
+  --eco-text-base: 1.02rem;
+  --eco-text-lg: 1.22rem;
   --eco-text-xl: clamp(1.65rem, 3vw, 2.45rem);
-  --eco-text-display: clamp(3rem, 7vw, 6.5rem);
+  --eco-text-display: clamp(3rem, 6.5vw, 5.8rem);
   --eco-content-width: 1320px;
+
+  /* Transitions */
+  --eco-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --eco-transition-smooth: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --eco-transition-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }

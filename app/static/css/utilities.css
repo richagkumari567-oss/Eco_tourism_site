@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Utility Classes & Keyframe Micro-Animations
+   ========================================================================== */
 .section-heading .eyebrow {
   margin-bottom: 0.65rem;
 }
@@ -7,25 +10,27 @@
 }
 
 .action-row {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 .place-facts {
-  margin-block: 1rem 2rem;
+  margin-block: 1.2rem 2.2rem;
 }
 
 .review-item small {
-  color: var(--eco-muted);
+  color: var(--eco-muted-light);
 }
 
 .budget-breakdown li:hover {
-  padding-inline: 0.6rem;
-  border-color: var(--eco-moss-600);
+  padding-inline: 0.75rem;
+  border-color: var(--eco-moss-500);
+  background: rgba(16, 185, 129, 0.05);
 }
 
+/* Micro-Animations */
 @keyframes content-rise {
   from {
-    transform: translateY(1rem);
+    transform: translateY(1.4rem);
     opacity: 0;
   }
   to {
@@ -36,15 +41,52 @@
 
 @keyframes menu-enter {
   from {
-    transform: translateY(-0.4rem);
+    transform: translateY(-0.5rem) scale(0.98);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
 }
 
+@keyframes hero-scroll-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(245, 158, 11, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Glass panel utility */
+.glass-panel {
+  background: var(--eco-glass-bg);
+  border: 1px solid var(--eco-glass-border);
+  box-shadow: var(--eco-shadow-soft);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Media Queries & Accessibility */
 @media (max-width: 560px) {
   .stats-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -64,9 +106,9 @@
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms;
-    animation-iteration-count: 1;
-    scroll-behavior: auto;
-    transition-duration: 0.01ms;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
